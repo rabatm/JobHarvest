@@ -149,12 +149,11 @@ def scrape_apec_job_details( categorie):
                 jobs_list.append(job_info)
             else:
                 print(f"No email found for {job_info.get('company')}")
-        dataframe = pd.DataFrame(jobs_list)
-        return dataframe
-            
     except Exception as e:
         print(f"Error occurred: {e}")
 
     finally:
         # Fermer le navigateur à la fin du scraping
+        dataframe = pd.DataFrame(jobs_list)
         driver.quit()
+        return dataframe

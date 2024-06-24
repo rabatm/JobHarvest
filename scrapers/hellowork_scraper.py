@@ -50,8 +50,8 @@ def get_hellowork_job_details(job_id, job_info, driver):
 
         # Extract contract type, location, and other details
         details = soup.select('ul.tw-flex.tw-flex-wrap.tw-gap-3 li.tw-tag-contract-s.tw-readonly')
-        contract_type = details[0].text.strip()
-        location = details[1].text.strip()
+        location = details[0].text.strip()
+        contract_type = details[1].text.strip()
 
         # Extract job description
         job_description = soup.select_one('section p.tw-typo-long-m').text.strip()
@@ -114,12 +114,9 @@ def scrape_hellowork_job_details(categorie):
                 job_info['website'] = website_url
                 job_info['categorie'] = categorie
                 jobs_list.append(job_info)
-        dataframe = pd.DataFrame(jobs_list)
-        return dataframe
-            
     except Exception as e:
         print(f"Error occurred: {e}")
-
     finally:
-        # Fermer le navigateur à la fin du scraping
+        dataframe = pd.DataFrame(jobs_list)
         driver.quit()
+        return dataframe

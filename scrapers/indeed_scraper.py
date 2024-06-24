@@ -45,12 +45,16 @@ def get_indeed_job_details(job_url, job_info, driver):
     driver.get(job_url)
     time.sleep(5) 
     soup = BeautifulSoup(driver.page_source, 'html.parser')
-    job_info['description'] = extract_description_from_ld_json(job_resp.content)
-    job_info['salary'] = get_detail(job_soup, 'salary-snippet-container', 'salary')
-    job_info['ville'] = get_detail(job_soup, 'css-45str8 eu4oa1w0', 'ville')
-    job_info['type'] = get_detail(job_soup, 'jobsearch-JobInfoHeader-subtitle', 'type', 1)
-    job_info_json = json.dumps(job_info)
-    return job_info_json
+    #job_info['description'] = extract_description_from_ld_json(job_resp.content)
+    job_info['salary'] = get_detail(soup, 'salary-snippet-container', 'salary')
+    job_info['ville'] = get_detail(soup, 'css-45str8 eu4oa1w0', 'ville')
+    job_info['type'] = get_detail(soup, 'jobsearch-JobInfoHeader-subtitle', 'type', 1)
+    job_description_div = soup.find(id="jobDescriptionText")
+    if job_description_div:
+        job_description_text = job_description_div.get_text(separator="\n", strip=True)
+        job_info['description'] = job_description_text
+        print(job_description_text)
+    return job_info
 
 def scrape_indeed_job_details(categorie):
     url = generate_indeed_url(categorie)
@@ -63,37 +67,38 @@ def scrape_indeed_job_details(categorie):
     soup = BeautifulSoup(driver.page_source, 'html.parser')
     jobs_list = []
     for post in soup.select('.job_seen_beacon'):
-        print(post)
         job_info = {}
-        job_info['categorie'] = categorie
-        job_link_tag = post.select_one('a[id^="sj_"]')
-        job_link = job_link_tag['href'] if job_link_tag else None
-        
-        job_info['company'] = get_job_info(post, '[data-testid="company-name"]', 'company')
-        email, website_url = find_company_email(job_info.get('company'), driver)
-        if email or email not in ["", None]:
-            job_info['email'] = email
-            job_info['website'] = website_url
+        try:
             job_info['categorie'] = categorie
+            job_link_tag = post.select_one('a[id^="sj_"]')
+            job_link = job_link_tag['href'] if job_link_tag else None
+            
+            job_info['company'] = get_job_info(post, '[data-testid="company-name"]', 'company')
+            email, website_url = find_company_email(job_info.get('company'), driver)
+            if email or email not in ["", None]:
+                job_info['email'] = email
+                job_info['website'] = website_url
+            else:
+                continue
+            job_info = get_indeed_job_details(job_link, job_info, driver)
+            company = post.select_one('[data-testid="company-name"]')
+            if not company:
+                continue
+
+            job_info['job_title'] = get_job_info(post, '.jobTitle span', 'job_title')
+            job_info['company'] = get_job_info(post, '[data-testid="company-name"]', 'company')
+            job_info['location'] = get_job_info(post, '[data-testid="text-location"]', 'location')
+            job_info['date'] = get_job_info(post, '[data-testid="myJobsStateDate"]', 'date')
+            job_info['job_link'] = job_link.replace("\n", " ") if job_link else None
+            print(job_info)
             jobs_list.append(job_info)
-        else:
-            continue
-        job_description = get_indeed_job_details(job_link, job_info, driver) if job_link else "N/A"
-        if job_description == "N/A":
-            continue
-        company = post.select_one('[data-testid="company-name"]')
-        if not company:
-            continue
-
-        job_info['job_title'] = get_job_info(post, '.jobTitle span', 'job_title')
-        job_info['company'] = get_job_info(post, '[data-testid="company-name"]', 'company')
-        job_info['location'] = get_job_info(post, '[data-testid="text-location"]', 'location')
-        job_info['date'] = get_job_info(post, '[data-testid="myJobsStateDate"]', 'date')
-        job_info['job_link'] = job_link.replace("\n", " ") if job_link else None
-        jobs_list.append(job_info)
-
-    dataframe = pd.DataFrame(jobs_list)
-    return dataframe
+        except Exception as e:
+            print(f"Error occurred: {e}")
+        finally:
+            # Fermer le navigateur à la fin du scraping
+            dataframe = pd.DataFrame(jobs_list)
+            driver.quit()
+            return dataframe
 
 def generate_indeed_url(job_title, location='France'):
     base_url = 'https://fr.indeed.com/jobs'
