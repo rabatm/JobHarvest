@@ -1,0 +1,362 @@
+[
+  {
+    "company": "SUEZ",
+    "website": "https://www.suez.fr/fr-fr/nous-contacter",
+    "contact": "contact@suez.fr"
+  },
+  {
+    "company": "LVMH Moët Hennessy Louis Vuitton",
+    "website": "https://careers.lvmh.com/intl/",
+    "contact": "talentsconnection.france@lvmh.com"
+  },
+  {
+    "company": "Capgemini",
+    "website": "https://www.capgemini.com/fr-fr/careers/",
+    "contact": "recrutement.france@capgemini.com"
+  },
+  {
+    "company": "AccorHotels",
+    "website": "https://careers.accor.com/",
+    "contact": "talent-acquisition.france@accor.com"
+  },
+  {
+    "company": "Sanofi",
+    "website": "https://www.sanoficareers.com/",
+    "contact": "talent.resourcing.france@sanofi.com"
+  },
+  {
+    "company": "Thales",
+    "website": "https://www.thalesgroup.com/fr/homepage/careers",
+    "contact": "recrutement.france@thalesgroup.com"
+  },
+  {
+    "company": "Orange",
+    "website": "https://www.orange.jobs/",
+    "contact": "recrutement.internet.drhcentral@orange.com"
+  },
+  {
+    "company": "TotalEnergies",
+    "website": "https://www.totalenergies.com/careers",
+    "contact": "careers.france@totalenergies.com"
+  },
+  {
+    "company": "Safran",
+    "website": "https://www.safran-group.com/careers",
+    "contact": "talent.acquisition.france@safrangroup.com"
+  },
+  {
+    "company": "Schneider Electric",
+    "website": "https://www.se.com/ww/en/about-us/careers/",
+    "contact": "careers.france@schneiderelectric.com"
+  },
+  {
+    "company": "Danone",
+    "website": "https://www.danone.com/careers.html",
+    "contact": "talent.acquisition.team@danone.com"
+  },
+  {
+    "company": "Approach People",
+    "website": "https://www.approachepeople.com/",
+    "contact": "[contact@approachpeoplerh.com](mailto:contact@approachpeoplerh.com)"
+  },
+  {
+    "company": "Michael Page International",
+    "website": "https://www.michaelpage.fr/",
+    "contact": "candidats@michaelpage.fr"
+  },
+  {
+    "company": "Hays plc",
+    "website": "https://www.hays.fr/",
+    "contact": "webmaster@hays.fr"
+  },
+  {
+    "company": "Robert Walters",
+    "website": "https://www.robertwalters.fr/",
+    "contact": "france@robertwalters.com"
+  },
+  {
+    "company": "Page Personnel",
+    "website": "https://www.pagepersonnel.fr/",
+    "contact": "contactez-nous@pagepersonnel.fr"
+  },
+  {
+    "company": "Kelly Services",
+    "website": "https://www.kellyservices.fr/",
+    "contact": "france@kellyservices.co.uk"
+  },
+  {
+    "company": "ManpowerGroup",
+    "website": "https://www.manpowergroup.fr/",
+    "contact": "communication@manpowergroup.fr"
+  },
+  {
+    "company": "Adecco Group",
+    "website": "https://www.adeccogroup.fr/",
+    "contact": "webmaster@adecco.fr"
+  },
+  {
+    "company": "Expectra",
+    "website": "https://www.expectra.fr/",
+    "contact": "contact@expectra.fr"
+  },
+  {
+    "company": "Open",
+    "website": "https://www.open-rh.fr/",
+    "contact": "webmaster@open-rh.fr"
+  },
+  {
+    "company": "Uptoo",
+    "website": "https://www.uptoo.fr/",
+    "contact": "contact@uptoo.fr"
+  },
+  {
+    "company": "Figaro Classifieds",
+    "website": "https://www.figaroclassifieds.fr/",
+    "contact": "serviceclients@figarocms.fr"
+  },
+  {
+    "company": "Groupe Adéquat",
+    "website": "https://www.groupeadequat.fr/",
+    "contact": "webmaster@groupeadequat.fr"
+  },
+  {
+    "company": "Nexity",
+    "website": "https://www.nexity.fr/",
+    "contact": "recrute@nexity.fr"
+  },
+  {
+    "company": "VINCI",
+    "website": "https://www.vinci.com/vinci.nsf/en/index.html",
+    "contact": "carrieres@vinci.com"
+  },
+  {
+    "company": "Approach People",
+    "website": "https://www.approachepeople.com/",
+    "contact": "[contact@approachpeoplerh.com](mailto:contact@approachpeoplerh.com)"
+  },
+  {
+    "company": "Michael Page International",
+    "website": "https://www.michaelpage.fr/",
+    "contact": "candidats@michaelpage.fr"
+  },
+  {
+    "company": "Hays plc",
+    "website": "https://www.hays.fr/",
+    "contact": "webmaster@hays.fr"
+  },
+  {
+    "company": "Robert Walters",
+    "website": "https://www.robertwalters.fr/",
+    "contact": "france@robertwalters.com"
+  },
+  {
+    "company": "Page Personnel",
+    "website": "https://www.pagepersonnel.fr/",
+    "contact": "contactez-nous@pagepersonnel.fr"
+  },
+  {
+    "company": "Kelly Services",
+    "website": "https://www.kellyservices.fr/",
+    "contact": "france@kellyservices.co.uk"
+  },
+  {
+    "company": "ManpowerGroup",
+    "website": "https://www.manpowergroup.fr/",
+    "contact": "communication@manpowergroup.fr"
+  },
+  {
+    "company": "Adecco Group",
+    "website": "https://www.adeccogroup.fr/",
+    "contact": "webmaster@adecco.fr"
+  },
+  {
+    "company": "Expectra",
+    "website": "https://www.expectra.fr/",
+    "contact": "contact@expectra.fr"
+  },
+  {
+    "company": "Open",
+    "website": "https://www.open-rh.fr/",
+    "contact": "webmaster@open-rh.fr"
+  },
+  {
+    "company": "Uptoo",
+    "website": "https://www.uptoo.fr/",
+    "contact": "contact@uptoo.fr"
+  },
+  {
+    "company": "Figaro Classifieds",
+    "website": "https://www.figaroclassifieds.fr/",
+    "contact": "serviceclients@figarocms.fr"
+  },
+  {
+    "company": "Groupe Adéquat",
+    "website": "https://www.groupeadequat.fr/",
+    "contact": "webmaster@groupeadequat.fr"
+  },
+  {
+    "company": "Nexity",
+    "website": "https://www.nexity.fr/",
+    "contact": "recrute@nexity.fr"
+  },
+  {
+    "company": "VINCI",
+    "website": "https://www.vinci.com/vinci.nsf/en/index.html",
+    "contact": "carrieres@vinci.com"
+  },
+  {
+    "company": "LVMH Moët Hennessy Louis Vuitton",
+    "website": "https://careers.lvmh.com/intl/",
+    "contact": "talentsconnection.france@lvmh.com"
+  },
+  {
+    "company": "Capgemini",
+    "website": "https://www.capgemini.com/fr-fr/careers/",
+    "contact": "recrutement.france@capgemini.com"
+  },
+  {
+    "company": "AccorHotels",
+    "website": "https://careers.accor.com/",
+    "contact": "talent-acquisition.france@accor.com"
+  },
+  {
+    "company": "Sanofi",
+    "website": "https://www.sanoficareers.com/",
+    "contact": "talent.resourcing.france@sanofi.com"
+  },
+  {
+    "company": "Thales",
+    "website": "https://www.thalesgroup.com/fr/homepage/careers",
+    "contact": "recrutement.france@thalesgroup.com"
+  },
+  {
+    "company": "Orange",
+    "website": "https://www.orange.jobs/",
+    "contact": "recrutement.internet.drhcentral@orange.com"
+  },
+  {
+    "company": "TotalEnergies",
+    "website": "https://www.totalenergies.com/careers",
+    "contact": "careers.france@totalenergies.com"
+  },
+  {
+    "company": "Safran",
+    "website": "https://www.safran-group.com/careers",
+    "contact": "talent.acquisition.france@safrangroup.com"
+  },
+  {
+    "company": "Schneider Electric",
+    "website": "https://www.se.com/ww/en/about-us/careers/",
+    "contact": "careers.france@schneiderelectric.com"
+  },
+  {
+    "company": "Danone",
+    "website": "https://www.danone.com/careers.html",
+    "contact": "talent.acquisition.team@danone.com"
+  },
+  {
+    "company": "Chanel",
+    "website": "https://www.chanel.com/",
+    "contact": "contact@chanel.com"
+  },
+  {
+    "company": "Hermès",
+    "website": "https://www.hermes.com/",
+    "contact": "contact@hermes.com"
+  },
+  {
+    "company": "Louis Vuitton",
+    "website": "https://www.louisvuitton.com/",
+    "contact": "contact@louisvuitton.com"
+  },
+  {
+    "company": "Dior",
+    "website": "https://www.dior.com/",
+    "contact": "contact@dior.com"
+  },
+  {
+    "company": "L'Oréal",
+    "website": "https://www.loreal.com/",
+    "contact": "contact@loreal.com"
+  },
+  {
+    "company": "Cartier",
+    "website": "https://www.cartier.com/",
+    "contact": "contact@cartier.com"
+  },
+  {
+    "company": "Givenchy",
+    "website": "https://www.givenchy.com/",
+    "contact": "contact@givenchy.com"
+  },
+  {
+    "company": "Chloé",
+    "website": "https://www.chloe.com/",
+    "contact": "contact@chloe.com"
+  },
+  {
+    "company": "Saint Laurent",
+    "website": "https://www.ysl.com/",
+    "contact": "contact@ysl.com"
+  },
+  {
+    "company": "Balenciaga",
+    "website": "https://www.balenciaga.com/",
+    "contact": "contact@balenciaga.com"
+  },
+  {
+    "company": "Christian Louboutin",
+    "website": "https://www.christianlouboutin.com/",
+    "contact": "contact@christianlouboutin.com"
+  },
+  {
+    "company": "Duvetica",
+    "website": "https://www.duvetica.com/",
+    "contact": "contact@duvetica.com"
+  },
+  {
+    "company": "Maje",
+    "website": "https://www.maje.com/",
+    "contact": "contact@maje.com"
+  },
+  {
+    "company": "Sandro",
+    "website": "https://www.sandro-paris.com/",
+    "contact": "contact@sandro-paris.com"
+  },
+  {
+    "company": "Isabel Marant",
+    "website": "https://www.isabelmarant.com/",
+    "contact": "contact@isabelmarant.com"
+  },
+  {
+    "company": "Céline",
+    "website": "https://www.celine.com/",
+    "contact": "contact@celine.com"
+  },
+  {
+    "company": "Pierre Hardy",
+    "website": "https://www.pierrehardy.com/",
+    "contact": "contact@pierrehardy.com"
+  },
+  {
+    "company": "Repetto",
+    "website": "https://www.repetto.com/",
+    "contact": "contact@repetto.com"
+  },
+  {
+    "company": "Roger Vivier",
+    "website": "https://www.rogervivier.com/",
+    "contact": "contact@rogervivier.com"
+  },
+  {
+    "company": "Vanessa Bruno",
+    "website": "https://www.vanessabruno.com/",
+    "contact": "contact@vanessabruno.com"
+  },
+  {
+    "company": "Zadig & Voltaire",
+    "website": "https://www.zadig-et-voltaire.com/",
+    "contact": "contact@zadig-et-voltaire.com"
+  }
+]

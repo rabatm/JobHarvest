@@ -1,0 +1,49 @@
+{
+  "Bureau": [
+    "Secrétaire/administrateur(trice) de bureau",
+    "Assistant(e) administratif(ve)",
+    "Gestionnaire de dossiers",
+    "Assistant(e) de direction",
+    "Agent administratif",
+    "Commercial(e)",
+    "Représentant(e) des ventes",
+    "Vendeur/Vendeuse",
+    "Conseiller(ère) de vente",
+    "Responsable de magasin",
+    "ADV - Agent d'administration des ventes",
+    "Téléopérateur(trice)"
+  ],
+  "Service à la personne": [
+    "Aide-soignant(e)",
+    "Infirmier(ère)",
+    "Auxiliaire de vie",
+    "Garde d'enfants",
+    "Aide à domicile",
+    "Aide médico-psychologique (AMP)",
+    "Auxiliaire de vie sociale (AVS)"
+  ],
+  "Finance": [
+    "Conseiller(ère) financier(ère)",
+    "Chargé(e) de clientèle / Gestionnaire de compte",
+    "Analyste financier(ère)",
+    "Gestionnaire de patrimoine",
+    "Agent de crédit"
+  ],
+  "Hôtellerie": [
+    "Réceptionniste / Veilleur de nuit",
+    "Gouvernante",
+    "Cuisinier(ère)",
+    "Serveur/Serveuse",
+    "Concierge"
+  ],
+  "Événementiel": [
+    "Organisateur(trice) d'événements",
+    "Coordinateur(trice) événementiel(le)",
+    "Responsable logistique événementielle",
+    "Technicien(ne) son et lumière",
+    "Traiteur/Traiteuse",
+    "Chef de projet évènementiel",
+    "Wedding planner",
+    "Directeur(trice) d'agence événementielle"
+  ]
+}

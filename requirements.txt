@@ -1,0 +1,7 @@
+Pillow
+selenium
+webdriver_manager
+undetected-chromedriver
+dnspython
+beautifulsoup4
+requests
