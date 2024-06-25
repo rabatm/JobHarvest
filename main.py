@@ -44,11 +44,11 @@ with open('db/categorie.json', 'r', encoding='utf-8') as f:
 for category, subcategories in categories.items():
     for subcategory in subcategories:
         try :
-            #fetch_data(subcategory, scrape_hellowork_job_details, 'hello')
-            #fetch_data(subcategory, scrape_pole_job_details, 'pole')
-            #fetch_data(subcategory, scrape_linkedin_job_details, 'linkedin')
-            #fetch_data(subcategory, scrape_jobup_job_details, 'jobup')
-            #fetch_data(subcategory, scrape_apec_job_details, 'apec')
+            fetch_data(subcategory, scrape_hellowork_job_details, 'hello')
+            fetch_data(subcategory, scrape_pole_job_details, 'pole')
+            fetch_data(subcategory, scrape_linkedin_job_details, 'linkedin')
+            fetch_data(subcategory, scrape_jobup_job_details, 'jobup')
+            fetch_data(subcategory, scrape_apec_job_details, 'apec')
             fetch_data(subcategory, scrape_indeed_job_details, 'indeed')
         except Exception as e:
             print(f"Error occurred: {e}")
