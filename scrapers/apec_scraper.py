@@ -84,7 +84,7 @@ def get_apec_job_details(job_id, job_info, driver):
         # Trouver le premier <p> après <h4>
         first_p = header_tag.find_next_sibling('p')
         if first_p:
-            description = first_p.text.strip()
+            description = str(first_p)
             # Trouver le deuxième <p> qui contient la description
             second_p = first_p.find_next_sibling('p')
             if second_p:

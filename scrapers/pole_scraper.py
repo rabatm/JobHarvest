@@ -54,7 +54,8 @@ def get_pole_job_details(job_id, job_info, driver):
         entreprise, contrat, localisation = "Not found", "Not found", "Not found"
 
     description_element = soup.find("h4", text="Descriptif du poste")
-    description = description_element.find_next("p").text if description_element else "Description not found"
+    if description_element:
+        description = str(description_element)
     job_info = {
         # Assuming entreprise, contrat, localisation are extracted correctly
         'job_title': safe_extract(soup.select_one, '#labelPopinDetailsOffre span[itemprop="title"]'),

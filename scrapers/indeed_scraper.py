@@ -50,10 +50,11 @@ def get_indeed_job_details(job_url, job_info, driver):
     job_info['ville'] = get_detail(soup, 'css-45str8 eu4oa1w0', 'ville')
     job_info['type'] = get_detail(soup, 'jobsearch-JobInfoHeader-subtitle', 'type', 1)
     job_description_div = soup.find(id="jobDescriptionText")
+    
     if job_description_div:
-        job_description_text = job_description_div.get_text(separator="\n", strip=True)
-        job_info['description'] = job_description_text
-        print(job_description_text)
+        job_description_html = str(job_description_div)
+        job_info['description'] = str(job_description_div)
+        print(job_description_html)
     return job_info
 
 def scrape_indeed_job_details(categorie):

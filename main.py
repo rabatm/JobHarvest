@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import json
 import pandas as pd
 import os
@@ -37,17 +38,17 @@ def fetch_data(title, scraper, source):
 if not os.path.exists('json'):
     os.makedirs('json')
 
-with open('db/categorie.json', 'r') as f:
+with open('db/categorie.json', 'r', encoding='utf-8') as f:
     categories = json.load(f)
 
 for category, subcategories in categories.items():
     for subcategory in subcategories:
         try :
-            fetch_data(subcategory, scrape_hellowork_job_details, 'hello')
-            fetch_data(subcategory, scrape_pole_job_details, 'pole')
-            fetch_data(subcategory, scrape_linkedin_job_details, 'linkedin')
-            fetch_data(subcategory, scrape_jobup_job_details, 'jobup')
-            fetch_data(subcategory, scrape_apec_job_details, 'apec')
+            #fetch_data(subcategory, scrape_hellowork_job_details, 'hello')
+            #fetch_data(subcategory, scrape_pole_job_details, 'pole')
+            #fetch_data(subcategory, scrape_linkedin_job_details, 'linkedin')
+            #fetch_data(subcategory, scrape_jobup_job_details, 'jobup')
+            #fetch_data(subcategory, scrape_apec_job_details, 'apec')
             fetch_data(subcategory, scrape_indeed_job_details, 'indeed')
         except Exception as e:
             print(f"Error occurred: {e}")

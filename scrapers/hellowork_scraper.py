@@ -54,7 +54,9 @@ def get_hellowork_job_details(job_id, job_info, driver):
         contract_type = details[1].text.strip()
 
         # Extract job description
-        job_description = soup.select_one('section p.tw-typo-long-m').text.strip()
+        job_description = soup.select_one('section p.tw-typo-long-m')
+        if job_description:
+           job_description = str(job_description)
 
         # Create job info dictionary
         job_info = {

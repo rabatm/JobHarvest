@@ -46,7 +46,9 @@ def get_linkedin_job_details(job_link, job_info, driver):
         location = location_element.text.strip()
 
         # Extract job description
-        job_description = soup.find('div', class_='description__text description__text--rich').text.strip()
+        job_description = soup.find('div', class_='description__text description__text--rich')
+        if job_description:
+            job_description = str(job_description)
 
         # Create job info dictionary
         job_info = {
