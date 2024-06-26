@@ -16,6 +16,14 @@ import undetected_chromedriver as uc
 import time
 import urllib.parse
 
+def extraire_indee_ville(text):
+    # Regex ajustée pour ignorer les chiffres et l'espace au début
+    match = re.search(r"^\d*\s*(.*?)(?: \(\d+\)|$)", text)
+    if match:
+        return match.group(1)
+    else:
+        return None
+
 def find_indeed_description_title(soup, phrase):
     try:
         return soup.find('h2', string=lambda text: text and phrase in text)
@@ -47,14 +55,12 @@ def get_indeed_job_details(job_url, job_info, driver):
     soup = BeautifulSoup(driver.page_source, 'html.parser')
     #job_info['description'] = extract_description_from_ld_json(job_resp.content)
     job_info['salary'] = get_detail(soup, 'salary-snippet-container', 'salary')
-    job_info['ville'] = get_detail(soup, 'css-45str8 eu4oa1w0', 'ville')
     job_info['type'] = get_detail(soup, 'jobsearch-JobInfoHeader-subtitle', 'type', 1)
     job_description_div = soup.find(id="jobDescriptionText")
     
     if job_description_div:
         job_description_html = str(job_description_div)
         job_info['description'] = str(job_description_div)
-        print(job_description_html)
     return job_info
 
 def scrape_indeed_job_details(categorie):
@@ -85,13 +91,12 @@ def scrape_indeed_job_details(categorie):
             company = post.select_one('[data-testid="company-name"]')
             if not company:
                 continue
-
             job_info['job_title'] = get_job_info(post, '.jobTitle span', 'job_title')
             job_info['company'] = get_job_info(post, '[data-testid="company-name"]', 'company')
-            job_info['location'] = get_job_info(post, '[data-testid="text-location"]', 'location')
+            job_info['ville'] = extraire_indee_ville(get_job_info(post, '[data-testid="text-location"]', 'location'))
+            time.sleep(50)
             job_info['date'] = get_job_info(post, '[data-testid="myJobsStateDate"]', 'date')
             job_info['job_link'] = job_link.replace("\n", " ") if job_link else None
-            print(job_info)
             jobs_list.append(job_info)
         except Exception as e:
             print(f"Error occurred: {e}")

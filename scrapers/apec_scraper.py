@@ -78,6 +78,8 @@ def get_apec_job_details(job_id, job_info, driver):
         entreprise, contrat, localisation = details
     else:
         entreprise, contrat, localisation = "Not found", "Not found", "Not found"
+    if localisation :
+        localisation = localisation.split(" - ")[0]
     description = find_apec_description_after_empty_p(soup, "Descriptif du poste")
     header_tag = soup.find('h4', string="Descriptif du poste")
     if header_tag:
