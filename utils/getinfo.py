@@ -18,12 +18,13 @@ def url_to_email(url):
 def get_company_website(job_info, max_retries=3):
     """Searches Bing for the company's official website with retry logic."""
     company_name = job_info.get("company")
+    compagny_ville = job_info.get("ville")
     if not company_name:
         return None
 
     headers = {'User-Agent': 'Mozilla/5.0'}
     excluded_keywords = ["wikipedia", "bing", "microsoft", "societe.com", "linkedin", "facebook", "twitter", "youtube", "instagram"]
-    search_url = f"https://www.bing.com/search?q={company_name}"
+    search_url = f"https://www.bing.com/search?q={company_name}+{ville}"
 
     retries = 0
     while retries < max_retries:
