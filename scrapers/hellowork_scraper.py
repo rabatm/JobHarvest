@@ -51,7 +51,7 @@ def get_hellowork_job_details(job_id, job_info, driver):
         # Extract contract type, location, and other details
         details = soup.select('ul.tw-flex.tw-flex-wrap.tw-gap-3 li.tw-tag-contract-s.tw-readonly')
         location = details[0].text.strip()
-        if localisation:
+        if location:
             location = location.split(' - ')[0]
         contract_type = details[1].text.strip()
 
